@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OpenAS",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"match": "\\b(?i)(else|for|goto|if|end|while)\\b",
+			"name": "keyword.control.main.open-as"
+		},
+		{
+			"match": "\\b(?i)(then)\\b",
+			"name": "keyword.control.main.open-as"
+		},
+		{
+			"match": "\\b(?i)(speed|prime|execute|step|mstep|hold|continue|stpnext|do|abort|kill)\\b",
+			"name": "keyword.control.program.open-as"
+		},
+		{
+			"match": "\\b(?i)(status|where|io|free|time|ulimit|llimit|base|tool|set_toolshape|ena_toolshape|toolshape|set_maxtoolshapenum|sethome|set2home|errlog|oplog|switch|on|off|zsigspec|hsetclamp|defsig|zzero|ereset|sysint|help|id|weight|encchk_emg|encchk_pon|slow_repeat|rec_accept|env_data|env_2data|chsum|tplight|ipeaklog|ipeakkclr|opeinfo|opeinfoclr|reffltset_status|ffset_status|enc_temp|setenctemp_thres)\\b",
+			"name": "keyword.control.system.open-as"
+		},
+		{
+			"match": "\\b(?i)(pcstatus|pcexecute||pckill|pcabort|pcend|pccontinue|pcstep|pcscan)\\b",
+			"name": "keyword.control.process.open-as"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.open-as",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.open-as",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.open-as",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.semi-colon.open-as",
+			"begin": ";",
+			"end": "(?<=\\n)(?<!\\\\\\n)"
+		},
+		"operators": {
+			"patterns": [
+				{
+					"match": "<>|<=|=<|>=|=<|==|<|>",
+					"name": "keyword.operator.relational.open-as"
+				},
+				{
+					"match": "\\+|-|\\*|/|\\^|MOD",
+					"name": "keyword.operator.arithmetic.open-as"
+				},
+				{
+					"match": "AND|NOT|OR|XOR",
+					"name": "keyword.operator.logical.open-as"
+				},
+				{
+					"match": "BAND|BOR|BXOR|COM",
+					"name": "keyword.operator.binary.open-as"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.assignment.open-as"
+				}
+			]
+		}
+	},
+	"scopeName": "source.openas"
+}

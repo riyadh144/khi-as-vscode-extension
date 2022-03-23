@@ -1,0 +1,37 @@
+{
+    "name": "openas",
+    "displayName": "OpenAS",
+    "description": "Kawasaki OpenAS language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "open-as",
+                "aliases": [
+                    "OpenAS",
+                    "open-as"
+                ],
+                "extensions": [
+                    ".as"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "open-as",
+                "scopeName": "source.openas",
+                "path": "./syntaxes/open-as.tmLanguage.json"
+            }
+        ]
+    },
+    "dependencies": {
+        "tmlanguage-generator": "^0.2.2"
+    }
+}
