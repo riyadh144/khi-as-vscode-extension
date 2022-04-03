@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
 		}
 	],
 	"repository": {
@@ -137,7 +140,7 @@
 					"name": "keyword.operator.assignment.open-as"
 				},
 				{
-					"match": "\\b(?i)(<|<=|<>|=<|==|=>|>|>=)\\b",
+					"match": "<|<=|<>|=<|==|=>|>|>=",
 					"name": "keyword.operator.relational.open-as"
 				},
 				{
@@ -149,36 +152,56 @@
 					"name": "keyword.operator.binay.open-as"
 				},
 				{
-					"match": "\\b(?i)(-|=+)\\b",
+					"match": "-|=+",
 					"name": "keyword.operator.transformation-value.open-as"
 				},
 				{
-					"match": "\\b(?i)(=+)\\b",
+					"match": "=+",
 					"name": "keyword.operator.string.open-as"
+				},
+				{
+					"match": "\\[|\\]|\\(|\\)",
+					"name": "keyword.operator.brackets"
+				},
+				{
+					"match": "\\,",
+					"name": "keyword.operator.comma"
 				}
 			]
 		},
 		"variables": {
 			"patterns": [
 				{
-					"match": "[ \\)\\]\\,\\(\\[]\\$(.\\w+)\\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\$(.\\w+)\\$(.\\w+)\\b",
 					"name": "variable.global.string.open-as"
 				},
 				{
-					"match": "[ \\)\\]\\,\\(\\[]\\.\\$(.\\w+)\\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\$(.\\w+)\\b",
 					"name": "variable.local.string.open-as"
 				},
 				{
-					"match": "[ \\)\\]\\,\\(\\[]\\.(?!PROGRAM|SYSDATA|TRANS|REALS|NETCONF2|NETCONF1|STRINGS|JOINTS|INTEGER|END|\\d+)(\\w+)\\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.(?!PROGRAM|SYSDATA|TRANS|REALS|NETCONF2|NETCONF1|STRINGS|JOINTS|INTEGER|END|\\d+)(\\w+)\\b",
 					"name": "variable.local.number.open-as"
 				},
 				{
-					"match": "[ \\)\\]\\,\\(\\[]\\.&(\\w+)\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\&(\\w+)\\b",
 					"name": "variable.local.point.open-as"
 				},
 				{
-					"match": "[ \\)\\]\\,\\(\\[]\\.#(\\w+)\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\#(\\w+)\\b",
 					"name": "variable.local.joint.open-as"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"match": "\\b\\d+\\b",
+					"name": "constant.numeric.open-as"
+				},
+				{
+					"match": "\\b(?i)(FALSE|TRUE)\\b",
+					"name": "constant.numeric.other"
 				}
 			]
 		}
