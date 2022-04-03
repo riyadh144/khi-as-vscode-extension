@@ -32,7 +32,7 @@
 					"name": "keyword.control.program.program-control-instructions.open-as"
 				},
 				{
-					"match": "\\b(?i)(CASE|DO|ELSE|EL|END|EN|FOR|IF|SCASE|UNTIL|UN|WHILE|WH)\\b",
+					"match": "\\b(?i)(CASE|DO|ELSE|EL|END|EN|FOR|IF|SCASE|SVALUE|UNTIL|UN|WHILE|WH)\\b",
 					"name": "keyword.control.program.program-structure-instructions.open-as"
 				},
 				{
@@ -80,7 +80,7 @@
 					"name": "support.function.program.configuration.open-as"
 				},
 				{
-					"match": "\\b(?i)($CHR|$DATE|$DECODE|$ENCODE|$ERRLOG|$ERROR|$ERRORS|$LEFT|$MID|$RIGHT|$SPACE|$STR_ID|$STR_ID2|$TIME|$TIME_MS)\\b",
+					"match": "\\$\\b(?i)(CHR|DATE|DECODE|ENCODE|ERRLOG|ERROR|ERRORS|LEFT|MID|RIGHT|SPACE|STR_ID|STR_ID2|TIME|TIME_MS)\\b",
 					"name": "support.function.functions.string.open-as"
 				},
 				{
@@ -172,11 +172,11 @@
 		"variables": {
 			"patterns": [
 				{
-					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\$(.\\w+)\\$(.\\w+)\\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?(?!\\$CHR|\\$DATE|\\$DECODE|\\$ENCODE|\\$ERRLOG|\\$ERROR|\\$ERRORS|\\$LEFT|\\$MID|\\$RIGHT|\\$SPACE|\\$STR_ID|\\$STR_ID2|\\$TIME|\\$TIME_MS)\\$(.\\w+)\\b",
 					"name": "variable.global.string.open-as"
 				},
 				{
-					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\$(.\\w+)\\b",
+					"match": "(?: |\\)|\\]|\\,|\\(|\\[|\\=|\\+|\\-|\\/|\\*|\\>|\\<|\\^|\\!|\\/)?\\.\\$(\\w+)\\b",
 					"name": "variable.local.string.open-as"
 				},
 				{
