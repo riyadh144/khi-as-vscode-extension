@@ -2,7 +2,7 @@
     "name": "openas",
     "displayName": "OpenAS",
     "description": "Kawasaki OpenAS language support",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "Riyadh144",
     "engines": {
         "vscode": "^1.65.0"
