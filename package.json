@@ -3,6 +3,7 @@
     "displayName": "OpenAS",
     "description": "Kawasaki OpenAS language support",
     "version": "0.0.1",
+    "publisher": "Riyadh144",
     "engines": {
         "vscode": "^1.65.0"
     },
@@ -33,5 +34,6 @@
     },
     "dependencies": {
         "tmlanguage-generator": "^0.2.2"
-    }
+    },
+    "repository": "https://github.com/riyadh144/khi-as-vscode-extension"
 }

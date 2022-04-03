@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
@@ -152,6 +155,30 @@
 				{
 					"match": "\\b(?i)(=+)\\b",
 					"name": "keyword.operator.string.open-as"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"match": "[ \\)\\]\\,\\(\\[]\\$(.\\w+)\\b",
+					"name": "variable.global.string.open-as"
+				},
+				{
+					"match": "[ \\)\\]\\,\\(\\[]\\.\\$(.\\w+)\\b",
+					"name": "variable.local.string.open-as"
+				},
+				{
+					"match": "[ \\)\\]\\,\\(\\[]\\.(?!PROGRAM|SYSDATA|TRANS|REALS|NETCONF2|NETCONF1|STRINGS|JOINTS|INTEGER|END|\\d+)(\\w+)\\b",
+					"name": "variable.local.number.open-as"
+				},
+				{
+					"match": "[ \\)\\]\\,\\(\\[]\\.&(\\w+)\b",
+					"name": "variable.local.point.open-as"
+				},
+				{
+					"match": "[ \\)\\]\\,\\(\\[]\\.#(\\w+)\b",
+					"name": "variable.local.joint.open-as"
 				}
 			]
 		}
