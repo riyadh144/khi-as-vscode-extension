@@ -6,165 +6,104 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
-		},
-		{
 			"include": "#comments"
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#supports"
+		},
+		{
+			"include": "#strings"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.open-as",
-					"match": "\\b(if|while|for|return)\\b"
-				},
-				{
-					"match": "\\b(?i)(speed|prime|execute|step|mstep|hold|continue|stpnext|do|abort|kill)\\b",
-					"name": "keyword.control.program.open-as"
-				},
-				{
-					"match": "\\b(?i)(EDIT|ED)\\b",
-					"name": "keyword.monitor.editor.open-as"
-				},
-				{
-					"match": "\\b(?i)(COPY|COP|DELETE|DEL|DIRECTORY|DI|LIST|LI|LSTRACE|RENAME|REN|RESTRACE|SETTRACE|SHUTDOWN|TRACE|USB_COPY|USB_FDEL|USB_FDIR|USB_RENAME|XFER|XF)\\b",
-					"name": "keyword.monitor.program-and-data-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(LOAD|LO|SAVE|SA|SAVE/ALLLOG|SAVE/ELOG|SA/ELOG|SAVE/FULL|SA/FULL|SAVE/OPLOG|SA/OPLOG|SAVE/P,L,R,S,A|SA/P|SAVE/ROB|SA/ROB|SAVE/STG|SA/STG|SAVE/SYS|SA/SYS|USB_LOAD|USB_LO|USB_MKDIR|USB_SAVE|USB_SA|USB_SAVE/ALLLOG|USB_SA/ALLLOG|USB_SAVE/ELOG|USB_SA/ELOG|USB_SAVE/OPLOG|USB_SA/OPLOG|USB_SAVE/P,L,R,S,A|USB_SA/P,L,R,S,A|USB_SAVE/ROB|USB_SA/ROB|USB_SAVE/SYS|USB_SA/SYS)\\b",
-					"name": "keyword.monitor.program-and-data-storage.open-as"
-				},
-				{
-					"match": "\\b(?i)(ABORT|AB|CONTINUE|CON|DO|EXECUTE|EX|HOLD|HO|KILL|KI|MSTEP|MS|PRIME|PRIM|SPEED|SP|STEP|STE|STPNEXT|STP)\\b",
-					"name": "keyword.monitor.program-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(HERE|HE|POINT|PO|POINT/7|PO/7|POINT/18|PO/18|POINT/A|PO/A|POINT/EXT|PO/EXT|POINT/O|PO/O|POINT/OAT|PO/OAT|POINT/T|PO/T|POINT/X|PO/X|POINT/Y|PO/Y|POINT/Z|PO/Z)\\b",
-					"name": "keyword.monitor.pose-information.open-as"
-				},
-				{
-					"match": "\\b(?i)(BASE|BA|CHSUM|CH|DEFSIG|DEF|ENA_TOOLSHAPE|ENC_TEMP|ENCCHK EMG|ENCCHK E|ENCCHK PON|ENCCHK P|ENV DATA|ENV|ENV2 DATA|ENV2|ERESET|ERE|ERRLOG|ERR|ERRLOG|ERR|FFSET_STATUS|FREE|FR|HELP|HEL|HELP/DO|HEL/DO|HELP/F|HEL/F|HELP/M|HEL/M|HELP/MC|HEL/MC|HELP/P|HEL/P|HELP/PPC|HEL/PPC|HELP/SW|HEL/SW|HSETCLAMP|HS|ID|IO|IPEAKCLR|IPEAKLOG|LLIMIT|LL|OFF|OF|ON|OPEINFO|OPEINFOCLR|OPLOG|OP|REC ACCEPT|REC|REFFLTSET_STATUS|SET_TOOLSHAPE|SET2HOME|SET2|SETENCTEMP_THRES|SETHOME|SETH|SET_MAXTOOLSHAPENUM|SLOW REPEAT|SL|STATUS|STA|SWITCH|SW|SYSINIT|SYS|TIME|TI|TOOL|TOOLSHAPE|TPLIGHT|ULIMIT|UL|WEIGHT|WE|WHERE|W|ZSIGSPEC|ZSIG|ZZERO|ZZ)\\b",
-					"name": "keyword.monitor.system-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(BITS|BI|BITS32|DLYSIG|DL|HSENSE|HSENSESET|PULSE|PU|RESET|RES|RSIGRANGE|RSIGR|SCNT|SCN|SCNTRESET|SCNTR|SETPICK|SETPLACE|SFLK|SFLP|SIGNAL|SI|SOUT|SO|STIM|STI)\\b",
-					"name": "keyword.monitor.binary-signal.open-as"
-				},
-				{
-					"match": "\\b(?i)(IFPDISP|IFPLABEL|IFPTITLE|IFPWOVERWRITE|IFPWPRINT|IOBOARD_STATUS|OUTDA|PRINT|PRIN|SETOUTDA|TYPE|TY)\\b",
-					"name": "keyword.monitor.message-display.open-as"
-				},
-				{
-					"match": "\\b(?i)(PCABORT|PCA|PCCONTINUE|PCC|PCEND|PCEN|PCEXECUTE|PCEX|PCKILL|PCK|PCSTATUS|PCSTA|PCSTEP|PCSTE)\\b",
-					"name": "keyword.monitor.process-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(C|D|E|F|I|L|M|O|P|R|S|T|XD|XP|XQ|XS|XY)\\b",
-					"name": "keyword.editor.editor.open-as"
-				},
-				{
-					"match": "\\b(?i)(BASE|BA|CURLIM|DECOMPOSE|DECO|ENA_TOOLSHAP|ENA_TOOLSHAPE|ENVCHKRATE|HERE|HE|LLIMIT|LL|MC|M|OFF|OF|ON|POINT|PO|POINT/7|PO/7|POINT/18|PO/18|POINT/A|PO/A|POINT/EXT|PO/EXT|POINT/O|PO/O|POINT/OAT|PO/OAT|POINT/T|PO/T|POINT/X|PO/X|POINT/Y|PO/Y|POINT/Z|PO/Z|SET_TOOLSHAPE|SET2HOME|SET2|SETENCTEMP_THRES|SETHOME|SETH|SETTIME|TIMER|TI|TOOL|TOOLSHAPE|TPLIGHT|ULIMIT|UL|UTIMER|WEIGHT|WE)\\b",
-					"name": "keyword.program.pose-information.open-as"
-				},
-				{
-					"match": "\\b(?i)(BITS|BI|BITS32|CLAMP|DLYSIG|DL|EXTCALL|EX|HSENSE|HSENSESET|IGNORE|IG|ON|ON|ONI|ONI|PULSE|PU|RESET|RES|RSIGCORRECT|RSIGC|RSIGPOINT|RSIGP|RUNMASK|RU|SCNT|SCNTRESET|SCNTR|SETPICK|SETPLACE|SFLK|SFLP|SIGNAL|SI|SOUT|SO|STIM|STI|SWAIT|SW)\\b",
-					"name": "keyword.program.binary-signal.open-as"
-				},
-				{
-					"match": "\\b(?i)(ALIGN|AL|C1MOVE|C1|C2MOVE|C2|DELAY|DEL|DELETE|DEL|DRAW|DRA|DRIVE|DRI|HMOVE|HM|HOME|HO|JAPPRO|JA|JDEPART|JD|JMOVE|JM|LAPPRO|LA|LDEPART|LD|LMOVE|LM|NLOAD|SHUTDOWN|SLOAD|STABLE|STA|TDRAW|TD|TRACE|XMOVE|X)\\b",
-					"name": "keyword.program.motion-instruction.open-as"
-				},
-				{
-					"match": "\\b(?i)(ACCEL|ACCE|ACCURACY|ACCU|BRAKE|BRA|BREAK|BRE|BSPEED|BSP|DECEL|DECE|FFRESET|FFSET|MON_SPEED|REFFLTRESET|REFFLTSET|SPEED|SP)\\b",
-					"name": "keyword.program.speed-and-accuracy-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(CLOSE|CLOSEI|CLOSES|GUNOFF|GUNOFFTIMER|GUNON|GUNONTIMER|OPEN|OPENI|OPENS|RELAX|RELAXI|RELAXS)\\b",
-					"name": "keyword.program.clamp-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(ABOVE|AB|BELOW|BE|DWRIST|DW|LEFTY|LE|RIGHTY|RI|UWRIST|UW)\\b",
-					"name": "keyword.program.configuration.open-as"
-				},
-				{
 					"match": "\\b(?i)(CALL|CA|GOTO|GO|HALT|HA|IF|JUMP|LOCK|LO|MON_TWAIT|MVWAIT|ONE|PAUSE|PA|RETURN|RET|RETURNE|SCALL|SCA|SJUMP|STOP|STO|TWAIT|TW|WAIT|WA)\\b",
-					"name": "keyword.program.program-control-instructions.open-as"
+					"name": "keyword.control.program.program-control-instructions.open-as"
 				},
 				{
 					"match": "\\b(?i)(CASE|DO|ELSE|EL|END|EN|FOR|IF|SCASE|UNTIL|UN|WHILE|WH)\\b",
-					"name": "keyword.program.program-structure-instructions.open-as"
+					"name": "keyword.control.program.program-structure-instructions.open-as"
 				},
 				{
 					"match": "\\b(?i)(IFPDISP|IFPLABEL|IFPTITLE|IFPWOVERWRITE|IFPWPRINT|OUTDA|PRINT|PRIN|PROMPT|PROM|SETOUTDA|TYPE|TY)\\b",
-					"name": "keyword.program.message-control.open-as"
+					"name": "keyword.control.program.message-control.open-as"
 				},
 				{
 					"match": "\\b(?i)(PCABORT|PCA|PCEND|PCEN|PCEXECUTE|PCEX|PCSCAN|PCSC)\\b",
-					"name": "keyword.program.process-control.open-as"
+					"name": "keyword.other.control.open-as"
 				},
 				{
-					"match": "\\b(?i)(ABS.SPEED|AFTER.WAIT.TMR|AF|AUTOSTART.PC|AUTOSTART2.PC|AUTOSTART3.PC|AUTOSTART4.PC|AUTOSTART5.PC|CHECK.HOLD|CH|CHG_INTERRUPT_DECEL|CONF_VARIABLE|CP|CS|CYCLE.STOP|CY|DEST_CIRINT|DISP.EXESTEP|DISPIO_01|DIS|DIVIDE.TPKEY_S|ERROR|ERRSTART.PC|ERRS|FLOWRATE|HOLD.STEP|IFAKEY|INSERT_NO_CONFIRM|INTERP_FTOOL|INVALID.TPKEY_S|MESSAGES|ME|NO_SJISCONV|OX.PREOUT|OX|OXZERO|PCENDMSG_MASK|PNL_CYCST|PNL_ERESET|PNL_MPOWER|POWER|PREFETCH.SIGINS|PR|PROG.DATE|QTOOL|Q|REP_ONCE|REP|REP_ONCE.PRS_LAST|REPEAT|RGSO|RPS|RP|RUN|SCREEN|SC|SF_OPEN_ERROR|SIGMON_TEACH|SIGRSTCONF|SINGULAR|SLOW_START|STAT_ON_KYBD|STP_ONCE|ST|TEACH_LOCK|TOUCH.ENA|TOUCHST.ENA|TPKEY_A|TPSPEED.RESET|TRIGGER|USE_ISO8859_5|WAITREL_AUTO||WS.ZERO|WS_COMPOFF)\\b",
-					"name": "keyword.switches.as-system.open-as"
-				},
-				{
-					"match": "\\b(?i)($CHR|$DATE|$DECODE|$ENCODE|$ERRLOG|$ERROR|$ERRORS|$LEFT|$MID|$RIGHT|$SPACE|$STR_ID|$STR_ID2|$TIME|$TIME_MS)\\b",
-					"name": "keyword.functions.string.open-as"
-				},
-				{
-					"match": "\\b(?i)(ASC|BITS|BITS32|CURLIMM|CURLIMP|DEXT|DISTANCE|DX|DY|DZ|ENVCHKRATE|ERROR|EXISTCHAR|EXISTDATA|EXISTINTEGER|EXISTJOINT|EXISTLOCALCHAR|EXISTLOCALINTEGER|EXISTLOCALJOINT|EXISTLOCALREAL|EXISTLOCALTRANS|EXISTPGM|EXISTREAL|EXISTTRANS|GETENCTEMP|INRANGE|INS_POWER|INSTR|INT|IQARM|LEN|MAXINDEX|MAXVAL|MININDEX|MINVAL|MSPEED|MSPEED2|OFF|ON|OPEINFO|PRIORITY|ROUND|SIG|STRTOPOS|STRTOVAL|SWITCH|SYSDATA|$SYSDATA|TASK|TIMER|TRQNM|UTIMER|VAL|WHICHTASK|0|1)\\b",
-					"name": "keyword.functions.real-value.open-as"
-				},
-				{
-					"match": "\\b(?i)(AVE_TRANS|AVE TRANS|BASE|CCENTER|CSHIFT|#DEST|DEST|FRAME|#HERE|HERE|#HOME|NULL|#PPOINT|RX|RY|RZ|SHIFT|TOOL|TRADD|TRANS|TRSUB)\\b",
-					"name": "keyword.functions.pose-value.open-as"
-				},
-				{
-					"match": "\\b(?i)(ABS|ATAN2|COS|PI|RANDOM|SIN|SQRT)\\b",
-					"name": "keyword.functions.mathematical.open-as"
-				},
-				{
-					"match": "\\b(?i)(<|<=|<>|=<|==|=>|>|>=)\\b",
-					"name": "keyword.operators.relational.open-as"
-				},
-				{
-					"match": "\\b(?i)(AND|NOT|OR|XOR)\\b",
-					"name": "keyword.operators.logical.open-as"
-				},
-				{
-					"match": "\\b(?i)(BAND|BOR|BXOR|BX|COM)\\b",
-					"name": "keyword.operators.binay.open-as"
-				},
-				{
-					"match": "\\b(?i)(-|=+)\\b",
-					"name": "keyword.operators.transformation-value.open-as"
-				},
-				{
-					"match": "\\b(?i)(=+)\\b",
-					"name": "keyword.operators.string.open-as"
+					"match": "\\b(?i)(THEN|TO)\\b",
+					"name": "keyword.control.program-structure-instructions.open-as"
 				},
 				{
 					"match": "\\b(?i)(NEXT|N)\\b",
 					"name": "keyword.other.program-control.open-as"
+				}
+			]
+		},
+		"supports": {
+			"patterns": [
+				{
+					"match": "\\b(?i)(BASE|BA|CURLIM|DECOMPOSE|DECO|ENA_TOOLSHAP|ENA_TOOLSHAPE|ENVCHKRATE|HERE|HE|LLIMIT|LL|MC|M|OFF|OF|ON|POINT|PO|POINT/7|PO/7|POINT/18|PO/18|POINT/A|PO/A|POINT/EXT|PO/EXT|POINT/O|PO/O|POINT/OAT|PO/OAT|POINT/T|PO/T|POINT/X|PO/X|POINT/Y|PO/Y|POINT/Z|PO/Z|SET_TOOLSHAPE|SET2HOME|SET2|SETENCTEMP_THRES|SETHOME|SETH|SETTIME|TIMER|TI|TOOL|TOOLSHAPE|TPLIGHT|ULIMIT|UL|UTIMER|WEIGHT|WE)\\b",
+					"name": "support.function.program.pose-information.open-as"
+				},
+				{
+					"match": "\\b(?i)(BITS|BI|BITS32|CLAMP|DLYSIG|DL|EXTCALL|EX|HSENSE|HSENSESET|IGNORE|IG|ON|ON|ONI|ONI|PULSE|PU|RESET|RES|RSIGCORRECT|RSIGC|RSIGPOINT|RSIGP|RUNMASK|RU|SCNT|SCNTRESET|SCNTR|SETPICK|SETPLACE|SFLK|SFLP|SIGNAL|SI|SOUT|SO|STIM|STI|SWAIT|SW)\\b",
+					"name": "support.function.program.binary-signal.open-as"
+				},
+				{
+					"match": "\\b(?i)(ALIGN|AL|C1MOVE|C1|C2MOVE|C2|DELAY|DEL|DELETE|DEL|DRAW|DRA|DRIVE|DRI|HMOVE|HM|HOME|HO|JAPPRO|JA|JDEPART|JD|JMOVE|JM|LAPPRO|LA|LDEPART|LD|LMOVE|LM|NLOAD|SHUTDOWN|SLOAD|STABLE|STA|TDRAW|TD|TRACE|XMOVE|X)\\b",
+					"name": "support.function.program.motion-instruction.open-as"
+				},
+				{
+					"match": "\\b(?i)(ACCEL|ACCE|ACCURACY|ACCU|BRAKE|BRA|BREAK|BRE|BSPEED|BSP|DECEL|DECE|FFRESET|FFSET|MON_SPEED|REFFLTRESET|REFFLTSET|SPEED|SP)\\b",
+					"name": "support.function.program.speed-and-accuracy-control.open-as"
+				},
+				{
+					"match": "\\b(?i)(CLOSE|CLOSEI|CLOSES|GUNOFF|GUNOFFTIMER|GUNON|GUNONTIMER|OPEN|OPENI|OPENS|RELAX|RELAXI|RELAXS)\\b",
+					"name": "support.function.program.clamp-control.open-as"
+				},
+				{
+					"match": "\\b(?i)(ABOVE|AB|BELOW|BE|DWRIST|DW|LEFTY|LE|RIGHTY|RI|UWRIST|UW)\\b",
+					"name": "support.function.program.configuration.open-as"
+				},
+				{
+					"match": "\\b(?i)(ABS.SPEED|AFTER.WAIT.TMR|AF|AUTOSTART.PC|AUTOSTART2.PC|AUTOSTART3.PC|AUTOSTART4.PC|AUTOSTART5.PC|CHECK.HOLD|CH|CHG_INTERRUPT_DECEL|CONF_VARIABLE|CP|CS|CYCLE.STOP|CY|DEST_CIRINT|DISP.EXESTEP|DISPIO_01|DIS|DIVIDE.TPKEY_S|ERROR|ERRSTART.PC|ERRS|FLOWRATE|HOLD.STEP|IFAKEY|INSERT_NO_CONFIRM|INTERP_FTOOL|INVALID.TPKEY_S|MESSAGES|ME|NO_SJISCONV|OX.PREOUT|OX|OXZERO|PCENDMSG_MASK|PNL_CYCST|PNL_ERESET|PNL_MPOWER|POWER|PREFETCH.SIGINS|PR|PROG.DATE|QTOOL|Q|REP_ONCE|REP|REP_ONCE.PRS_LAST|REPEAT|RGSO|RPS|RP|RUN|SCREEN|SC|SF_OPEN_ERROR|SIGMON_TEACH|SIGRSTCONF|SINGULAR|SLOW_START|STAT_ON_KYBD|STP_ONCE|ST|TEACH_LOCK|TOUCH.ENA|TOUCHST.ENA|TPKEY_A|TPSPEED.RESET|TRIGGER|USE_ISO8859_5|WAITREL_AUTO||WS.ZERO|WS_COMPOFF)\\b",
+					"name": "support.function.switches.as-system.open-as"
+				},
+				{
+					"match": "\\b(?i)($CHR|$DATE|$DECODE|$ENCODE|$ERRLOG|$ERROR|$ERRORS|$LEFT|$MID|$RIGHT|$SPACE|$STR_ID|$STR_ID2|$TIME|$TIME_MS)\\b",
+					"name": "support.function.functions.string.open-as"
+				},
+				{
+					"match": "\\b(?i)(ASC|BITS|BITS32|CURLIMM|CURLIMP|DEXT|DISTANCE|DX|DY|DZ|ENVCHKRATE|ERROR|EXISTCHAR|EXISTDATA|EXISTINTEGER|EXISTJOINT|EXISTLOCALCHAR|EXISTLOCALINTEGER|EXISTLOCALJOINT|EXISTLOCALREAL|EXISTLOCALTRANS|EXISTPGM|EXISTREAL|EXISTTRANS|GETENCTEMP|INRANGE|INS_POWER|INSTR|INT|IQARM|LEN|MAXINDEX|MAXVAL|MININDEX|MINVAL|MSPEED|MSPEED2|OFF|ON|OPEINFO|PRIORITY|ROUND|SIG|STRTOPOS|STRTOVAL|SWITCH|SYSDATA|$SYSDATA|TASK|TIMER|TRQNM|UTIMER|VAL|WHICHTASK|0|1)\\b",
+					"name": "support.function.functions.real-value.open-as"
+				},
+				{
+					"match": "\\b(?i)(AVE_TRANS|AVE TRANS|BASE|CCENTER|CSHIFT|#DEST|DEST|FRAME|#HERE|HERE|#HOME|NULL|#PPOINT|RX|RY|RZ|SHIFT|TOOL|TRADD|TRANS|TRSUB)\\b",
+					"name": "support.function.functions.pose-value.open-as"
+				},
+				{
+					"match": "\\b(?i)(ABS|ATAN2|COS|PI|RANDOM|SIN|SQRT)\\b",
+					"name": "support.function.functions.mathematical.open-as"
 				},
 				{
 					"match": "\\b(?i)(INPUT|I|OUTPUT|O)\\b",
-					"name": "keyword.other.system-control.open-as"
+					"name": "support.function.other.system-control.open-as"
 				},
 				{
 					"match": "\\b(?i)(MM/MIN|MM/M|MM/S)\\b",
-					"name": "keyword.other.speed-and-accuracy-control.open-as"
-				},
-				{
-					"match": "\\b(?i)(THEN|TO)\\b",
-					"name": "keyword.other.program-structure-instructions.open-as"
+					"name": "support.function.other.speed-and-accuracy-control.open-as"
 				},
 				{
 					"match": "\\b(?i)(BY)\\b",
-					"name": "keyword.other.pose-value.open-as"
+					"name": "support.function.other.pose-value.open-as"
 				}
 			]
 		},
@@ -175,7 +114,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.open-as",
-					"match": "\\\\."
+					"match": "\\."
 				}
 			]
 		},
@@ -187,24 +126,32 @@
 		"operators": {
 			"patterns": [
 				{
-					"match": "<>|<=|=<|>=|=<|==|<|>",
-					"name": "keyword.operator.relational.open-as"
-				},
-				{
 					"match": "\\+|-|\\*|/|\\^|MOD",
 					"name": "keyword.operator.arithmetic.open-as"
 				},
 				{
-					"match": "AND|NOT|OR|XOR",
+					"match": "=",
+					"name": "keyword.operator.assignment.open-as"
+				},
+				{
+					"match": "\\b(?i)(<|<=|<>|=<|==|=>|>|>=)\\b",
+					"name": "keyword.operator.relational.open-as"
+				},
+				{
+					"match": "\\b(?i)(AND|NOT|OR|XOR)\\b",
 					"name": "keyword.operator.logical.open-as"
 				},
 				{
-					"match": "BAND|BOR|BXOR|COM",
-					"name": "keyword.operator.binary.open-as"
+					"match": "\\b(?i)(BAND|BOR|BXOR|BX|COM)\\b",
+					"name": "keyword.operator.binay.open-as"
 				},
 				{
-					"match": "=",
-					"name": "keyword.operator.assignment.open-as"
+					"match": "\\b(?i)(-|=+)\\b",
+					"name": "keyword.operator.transformation-value.open-as"
+				},
+				{
+					"match": "\\b(?i)(=+)\\b",
+					"name": "keyword.operator.string.open-as"
 				}
 			]
 		}
